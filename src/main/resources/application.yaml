@@ -2,6 +2,12 @@ spring:
   application:
     name: learn-spring-ai
 
+  datasource:
+    url: jdbc:postgresql://localhost:5422/spring-ai
+    username: postgres
+    password: Li@180803
+    driver-class-name: org.postgresql.Driver
+
 
   ai:
     openai:
@@ -10,6 +16,9 @@ spring:
         options:
           model: gpt-5.4-2026-03-05
           temperature: 0.9
+    vectorstore:
+      pgvector:
+        initialize-schema: true
 
 logging:
   level:
