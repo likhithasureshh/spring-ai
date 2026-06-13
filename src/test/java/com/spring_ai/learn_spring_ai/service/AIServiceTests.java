@@ -11,32 +11,22 @@ import java.util.Arrays;
 public class AIServiceTests {
     @Autowired
     private AIService aiService;
+    @Autowired
+    private RAGService ragService;
 
-    @Test
-    void runTests()
-    {
-        System.out.println(aiService.getResult("dogs"));
-    }
-    @Test
-    void embedded()
-    {
-        var res=aiService.getEmbedding("Its a big text here");
-        System.out.println(Arrays.toString(res));
-    }
+
     @Test
     void store()
     {
-        aiService.storeInVectorDb();
+        ragService.storeDataToVectorStore();
     }
 
     @Test
     void search()
     {
-       var res= aiService.similaritySearch("what is spring boot");
-       for(Document doc : res)
-       {
-           System.out.println(res);
-       }
+        System.out.println(ragService.askAI("Not able to connect to discord"));
     }
+
+
 
 }
