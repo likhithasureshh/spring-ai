@@ -7,6 +7,9 @@ spring:
     username: postgres
     password: Li@180803
     driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
 
 
   ai:
