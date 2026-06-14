@@ -24,7 +24,7 @@ public class AIServiceTests {
     @Test
     void search()
     {
-        System.out.println(ragService.askAI("Not able to connect to discord"));
+        System.out.println(ragService.askAIWithAdvisors("how to connect to discord?","rohit123"));
     }
 
 
